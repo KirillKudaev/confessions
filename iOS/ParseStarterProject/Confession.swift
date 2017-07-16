@@ -9,19 +9,24 @@
 import Foundation
 
 struct Confession {
-    var userName: String
-    var title: String
-    var description: String
-    var price: Float
+    
+    var id: String
+    var body: String
+    var hasPole: Bool
+    var likes: Int
+    var yesAnswers: Int
+    var noAnswers: Int
     var createdAt: Date
     var updatedAt: Date
     
-    init(userName: String, title: String, description: String, price: Float, createdAt: Date, updatedAt: Date) {
+    init(id: String, body: String, hasPole: Bool, likes: Int, yesAnswers: Int, noAnswers: Int, createdAt: Date, updatedAt: Date) {
         
-        self.userName = userName
-        self.title = title
-        self.description = description
-        self.price = price
+        self.id = id
+        self.body = body
+        self.hasPole = hasPole
+        self.likes = likes
+        self.yesAnswers = yesAnswers
+        self.noAnswers = noAnswers
         self.createdAt = createdAt as Date
         self.updatedAt = updatedAt as Date
     }

@@ -11,7 +11,6 @@
 		5642857D1EA85AE90068CB82 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5642857C1EA85AE90068CB82 /* HomeTableViewController.swift */; };
 		5642857F1EA85BD40068CB82 /* Confession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5642857E1EA85BD40068CB82 /* Confession.swift */; };
 		564285811EA85C800068CB82 /* ConfessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564285801EA85C800068CB82 /* ConfessionCell.swift */; };
-		564285831EA85C9B0068CB82 /* ConfessionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564285821EA85C9B0068CB82 /* ConfessionInfoViewController.swift */; };
 		564285851EA867320068CB82 /* PostConfession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564285841EA867320068CB82 /* PostConfession.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
@@ -46,7 +45,6 @@
 		5642857C1EA85AE90068CB82 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		5642857E1EA85BD40068CB82 /* Confession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confession.swift; sourceTree = "<group>"; };
 		564285801EA85C800068CB82 /* ConfessionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfessionCell.swift; sourceTree = "<group>"; };
-		564285821EA85C9B0068CB82 /* ConfessionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfessionInfoViewController.swift; sourceTree = "<group>"; };
 		564285841EA867320068CB82 /* PostConfession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConfession.swift; sourceTree = "<group>"; };
 		5642858E1EA97D7D0068CB82 /* ConfessionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfessionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB507A1E9E8967006E4CEA /* ConfessionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfessionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,14 +113,6 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
-		56D796311F1AF57500384679 /* ConfessionInfo */ = {
-			isa = PBXGroup;
-			children = (
-				564285821EA85C9B0068CB82 /* ConfessionInfoViewController.swift */,
-			);
-			name = ConfessionInfo;
-			sourceTree = "<group>";
-		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,9 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				56D7962F1F1AF4C200384679 /* PostConfession */,
 				56D796301F1AF56600384679 /* Home */,
-				56D796311F1AF57500384679 /* ConfessionInfo */,
+				56D7962F1F1AF4C200384679 /* PostConfession */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 			);
 			name = Confessions;
@@ -343,7 +332,6 @@
 				5642857F1EA85BD40068CB82 /* Confession.swift in Sources */,
 				5642857D1EA85AE90068CB82 /* HomeTableViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
-				564285831EA85C9B0068CB82 /* ConfessionInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

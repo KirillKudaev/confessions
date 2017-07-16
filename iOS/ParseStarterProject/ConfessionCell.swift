@@ -9,10 +9,9 @@ import UIKit
 
 class ConfessionCell: UITableViewCell {
     
-    @IBOutlet var userImage: UIImageView!
-   
-    @IBOutlet var userNameLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var lblDescription: UILabel!
+    @IBOutlet weak var lblLikesNumber: UILabel!
+    @IBOutlet weak var lblYesNumber: UILabel!
+    @IBOutlet weak var lblNoNumber: UILabel!
     @IBOutlet var lblTime: UILabel!
 }

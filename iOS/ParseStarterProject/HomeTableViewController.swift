@@ -10,32 +10,45 @@ import Parse
 
 class HomeTableViewController: UITableViewController {
     
-    var itemArray = Array<Confession>()
+    var confessionArray = Array<Confession>()
     var refresher: UIRefreshControl!
     
     func refresh() {
-        let query = PFQuery(className:"Item")
+        let query = PFQuery(className:"Post")
+        query.whereKey("approved", equalTo: true)
         query.order(byDescending: "createdAt")
-        query.limit = 100
+        query.limit = 1000
         query.findObjectsInBackground { (objects, error) -> Void in
             
             if error == nil {
-                self.itemArray.removeAll()
+                self.confessionArray.removeAll()
 
                 for object in objects! {
                     
-                    let item = Confession(userName: object["userEmail"] as! String, title: object["title"] as! String, description: object["description"] as! String, price: (object["price"] as! Float), createdAt: object.createdAt!, updatedAt: object.updatedAt!)
+//                    TESTING
+//                    let _ = object.objectId!
+//                    let _ = object["body"] as! String
+//                    let _ = object["hasPoll"] as! Bool
+//                    let _ = object["likes"] as! Int
+//                    let _ = object["yesAnswers"] as! Int
+//                    let _ = object["noAnswers"] as! Int
+//                    let _ = object.createdAt!
+//                    let _ = object.updatedAt!
                     
-                    self.itemArray.append(item)
+                    let confession = Confession(id: object.objectId!, body: object["body"] as! String, hasPole: object["hasPoll"] as! Bool, likes: object["likes"] as! Int, yesAnswers: object["yesAnswers"] as! Int, noAnswers: object["noAnswers"] as! Int, createdAt: object.createdAt!, updatedAt: object.updatedAt!)
+                    
+                    self.confessionArray.append(confession)
                 }
                 
-                print("Count: " + String(self.itemArray.count))
+                print("Count: " + String(self.confessionArray.count))
                 
                 // Reload tableview
                 self.tableView.reloadData()
             } else {
                 print(error)
             }
+            
+            print(self.confessionArray)
             
             self.refresher.endRefreshing()
         }
@@ -45,7 +58,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         refresher = UIRefreshControl()
-        refresher.attributedTitle = NSAttributedString(string: "Refreshing...")
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh...")
         refresher.addTarget(self, action: #selector(HomeTableViewController.refresh), for: UIControlEvents.valueChanged)
         self.tableView.addSubview(refresher)
         
@@ -72,48 +85,25 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return self.itemArray.count
+        return self.confessionArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ConfessionCell
         
-        cell.titleLabel.text = self.itemArray[indexPath.row].title
-        cell.descriptionLabel.text = self.itemArray[indexPath.row].description
-        cell.userNameLabel.text = self.itemArray[indexPath.row].userName
+        cell.lblDescription.text = self.confessionArray[indexPath.row].body
+        cell.lblLikesNumber.text = String(self.confessionArray[indexPath.row].likes)
+        cell.lblYesNumber.text = String(self.confessionArray[indexPath.row].yesAnswers)
+        cell.lblNoNumber.text = String(self.confessionArray[indexPath.row].noAnswers)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy HH:mm:ss"
-        let createdAt = dateFormatter.string(from:self.itemArray[indexPath.row].createdAt)
+        let createdAt = dateFormatter.string(from:self.confessionArray[indexPath.row].createdAt)
         
         cell.lblTime.text = createdAt
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        _ = tableView.indexPathForSelectedRow!
-        if let _ = tableView.cellForRow(at: indexPath) {
-            self.performSegue(withIdentifier: "showItem", sender: self)
-        }
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showItem" {
-            if let destination = segue.destination as? ConfessionInfoViewController {
-                
-                let path = tableView.indexPathForSelectedRow
-                let cell = tableView.cellForRow(at: path!) as! ConfessionCell
-                
-                destination.username = (cell.userNameLabel.text)!
-                destination.itemTitle = (cell.titleLabel.text)!
-                destination.itemContent = (cell.descriptionLabel.text)!
-                destination.time = (cell.lblTime.text)!
-            }
-        }
     }
 }
 
