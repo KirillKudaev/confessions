@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Confession.swift
 //  Confessions
 //
 //  Created by Kirill Kudaev on 7/15/17.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-struct Item {
+struct Confession {
     var userName: String
     var title: String
     var description: String

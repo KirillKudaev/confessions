@@ -1,5 +1,5 @@
 //
-//  ItemCell.swift
+//  ConfessionCell.swift
 //  Confessions
 //
 //  Created by Kirill Kudaev on 7/15/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemCell: UITableViewCell {
+class ConfessionCell: UITableViewCell {
     
     @IBOutlet var userImage: UIImageView!
    

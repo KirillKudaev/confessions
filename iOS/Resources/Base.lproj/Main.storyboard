@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3k-aX-Yrf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3k-aX-Yrf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Light</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Explore-->
+        <!--Home-->
         <scene sceneID="yok-qs-DKb">
             <objects>
                 <navigationController id="gtg-nH-cad" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" id="Nv3-LY-g9S">
+                    <tabBarItem key="tabBarItem" title="Home" id="Nv3-LY-g9S">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xad-gY-GXj">
@@ -47,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="908" y="123"/>
         </scene>
-        <!--Post Item for Sale-->
+        <!--Post a Confession-->
         <scene sceneID="lQC-xg-u2d">
             <objects>
-                <viewController id="AXn-71-VEz" customClass="PostItemViewController" customModule="confessions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AXn-71-VEz" customClass="PostConfessionViewController" customModule="Confessions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bdS-Px-SP4"/>
                         <viewControllerLayoutGuide type="bottom" id="J7G-Hm-P1I"/>
@@ -59,23 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-7a-g2d">
-                                <rect key="frame" x="16" y="119" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-eX-ex8">
-                                <rect key="frame" x="16" y="218" width="343" height="281"/>
-                                <color key="backgroundColor" red="0.92375041449999995" green="0.92375041449999995" blue="0.92375041449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="281" id="kvV-cS-I33"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDw-kK-dNQ">
-                                <rect key="frame" x="90" y="551" width="194" height="50"/>
+                                <rect key="frame" x="90.5" y="551" width="194" height="50"/>
                                 <color key="backgroundColor" red="0.33333333329999998" green="0.78039215689999997" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6kf-Ww-E73"/>
@@ -89,39 +79,36 @@
                                     <action selector="post:" destination="AXn-71-VEz" eventType="touchUpInside" id="Tcf-Sc-5pI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hD0-fg-dNg">
-                                <rect key="frame" x="16" y="157" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tell us here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-eX-ex8">
+                                <rect key="frame" x="16" y="122" width="343" height="357"/>
+                                <color key="backgroundColor" red="0.92375041449999995" green="0.92375041449999995" blue="0.92375041449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="OsM-7I-HmP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BW1-eX-ex8" firstAttribute="leading" secondItem="GXN-a8-RP9" secondAttribute="leadingMargin" id="3bY-y0-bhV"/>
-                            <constraint firstItem="hD0-fg-dNg" firstAttribute="leading" secondItem="GXN-a8-RP9" secondAttribute="leadingMargin" id="4v6-zz-Rq4"/>
+                            <constraint firstItem="BW1-eX-ex8" firstAttribute="top" secondItem="bdS-Px-SP4" secondAttribute="bottom" constant="58" id="3zx-K9-h5b"/>
                             <constraint firstItem="HDw-kK-dNQ" firstAttribute="centerX" secondItem="GXN-a8-RP9" secondAttribute="centerX" id="8CS-rX-8Y9"/>
                             <constraint firstItem="BW1-eX-ex8" firstAttribute="trailing" secondItem="GXN-a8-RP9" secondAttribute="trailingMargin" id="AGk-xV-gsb"/>
-                            <constraint firstItem="hD0-fg-dNg" firstAttribute="trailing" secondItem="GXN-a8-RP9" secondAttribute="trailingMargin" id="BfC-1D-58H"/>
-                            <constraint firstItem="CSz-7a-g2d" firstAttribute="leading" secondItem="GXN-a8-RP9" secondAttribute="leadingMargin" id="C0e-YH-nXd"/>
-                            <constraint firstItem="hD0-fg-dNg" firstAttribute="top" secondItem="CSz-7a-g2d" secondAttribute="bottom" constant="8" id="FdR-g8-GEC"/>
                             <constraint firstItem="J7G-Hm-P1I" firstAttribute="top" secondItem="HDw-kK-dNQ" secondAttribute="bottom" constant="17" id="K1I-Bu-4KW"/>
-                            <constraint firstItem="CSz-7a-g2d" firstAttribute="trailing" secondItem="GXN-a8-RP9" secondAttribute="trailingMargin" id="ish-4Z-3eG"/>
-                            <constraint firstItem="BW1-eX-ex8" firstAttribute="top" secondItem="hD0-fg-dNg" secondAttribute="bottom" constant="31" id="pWO-EJ-N7P"/>
-                            <constraint firstItem="CSz-7a-g2d" firstAttribute="top" secondItem="bdS-Px-SP4" secondAttribute="bottom" constant="55" id="yec-jQ-zat"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Post Item for Sale" id="UxY-tg-WbY"/>
+                    <navigationItem key="navigationItem" title="Post a Confession" id="UxY-tg-WbY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmz-Qq-brS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3394" y="625"/>
+            <point key="canvasLocation" x="3392.8000000000002" y="624.73763118440786"/>
         </scene>
-        <!--Post-->
+        <!--Confess-->
         <scene sceneID="Sb1-sO-c38">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AFh-ct-tUb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" id="Aao-vd-3ja">
+                    <tabBarItem key="tabBarItem" title="Confess" id="Aao-vd-3ja">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -138,27 +125,27 @@
             </objects>
             <point key="canvasLocation" x="2678" y="625"/>
         </scene>
-        <!--Items for Sale-->
+        <!--Confessions-->
         <scene sceneID="HiO-UC-P5m">
             <objects>
-                <tableViewController id="gRf-B8-j2I" customClass="HomeTableViewController" customModule="confessions" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gRf-B8-j2I" customClass="HomeTableViewController" customModule="Confessions" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="195" sectionHeaderHeight="28" sectionFooterHeight="28" id="WGE-V6-NYY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="195" id="Mkz-c7-jWa" customClass="ItemCell" customModule="confessions" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="195" id="Mkz-c7-jWa" customClass="ConfessionCell" customModule="Confessions" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="195"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mkz-c7-jWa" id="fCg-Fj-gdO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-Wp-tcm">
                                             <rect key="frame" x="8" y="0.0" width="86" height="72"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="item description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-eZ-sSo">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6x-eZ-sSo">
                                             <rect key="frame" x="8" y="80" width="359" height="81"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -186,7 +173,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwR-HO-OJ0">
-                                            <rect key="frame" x="50" y="0.0" width="274" height="30"/>
+                                            <rect key="frame" x="50.5" y="0.0" width="274" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="274" id="01f-n5-WNj"/>
                                                 <constraint firstAttribute="height" constant="30" id="Tfd-zA-3zq"/>
@@ -219,7 +206,7 @@
                             <outlet property="delegate" destination="gRf-B8-j2I" id="ca7-YN-vTi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Items for Sale" id="VcP-Qg-vZh"/>
+                    <navigationItem key="navigationItem" title="Confessions" id="VcP-Qg-vZh"/>
                     <connections>
                         <segue destination="fdo-9z-EcU" kind="show" identifier="showItem" id="otj-Hl-TeE">
                             <nil key="action"/>
@@ -230,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="2534" y="-107"/>
         </scene>
-        <!--Item View Controller-->
+        <!--Confession Info View Controller-->
         <scene sceneID="5Xk-c3-4lg">
             <objects>
-                <viewController id="fdo-9z-EcU" customClass="ItemViewController" customModule="confessions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fdo-9z-EcU" customClass="ConfessionInfoViewController" customModule="Confessions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gcy-7p-U9P"/>
                         <viewControllerLayoutGuide type="bottom" id="MuA-D1-pX5"/>

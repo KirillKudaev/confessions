@@ -1,5 +1,5 @@
 //
-//  ItemViewController.swift
+//  ConfessionInfoViewController.swift
 //  Confessions
 //
 //  Created by Kirill Kudaev on 7/15/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemViewController: UIViewController {
+class ConfessionInfoViewController: UIViewController {
 
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblTitle: UILabel!

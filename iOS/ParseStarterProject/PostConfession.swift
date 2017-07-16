@@ -1,5 +1,5 @@
 //
-//  PostItemInfo.swift
+//  PostConfession.swift
 //  Confessions
 //
 //  Created by Kirill Kudaev on 7/15/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PostItemInfo {
+struct PostConfession {
     
     var itemName: String
     var price: Float

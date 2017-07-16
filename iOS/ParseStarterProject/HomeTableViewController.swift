@@ -10,7 +10,7 @@ import Parse
 
 class HomeTableViewController: UITableViewController {
     
-    var itemArray = Array<Item>()
+    var itemArray = Array<Confession>()
     var refresher: UIRefreshControl!
     
     func refresh() {
@@ -24,7 +24,7 @@ class HomeTableViewController: UITableViewController {
 
                 for object in objects! {
                     
-                    let item = Item(userName: object["userEmail"] as! String, title: object["title"] as! String, description: object["description"] as! String, price: (object["price"] as! Float), createdAt: object.createdAt!, updatedAt: object.updatedAt!)
+                    let item = Confession(userName: object["userEmail"] as! String, title: object["title"] as! String, description: object["description"] as! String, price: (object["price"] as! Float), createdAt: object.createdAt!, updatedAt: object.updatedAt!)
                     
                     self.itemArray.append(item)
                 }
@@ -77,7 +77,7 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ConfessionCell
         
         cell.titleLabel.text = self.itemArray[indexPath.row].title
         cell.descriptionLabel.text = self.itemArray[indexPath.row].description
@@ -103,10 +103,10 @@ class HomeTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showItem" {
-            if let destination = segue.destination as? ItemViewController {
+            if let destination = segue.destination as? ConfessionInfoViewController {
                 
                 let path = tableView.indexPathForSelectedRow
-                let cell = tableView.cellForRow(at: path!) as! ItemCell
+                let cell = tableView.cellForRow(at: path!) as! ConfessionCell
                 
                 destination.username = (cell.userNameLabel.text)!
                 destination.itemTitle = (cell.titleLabel.text)!

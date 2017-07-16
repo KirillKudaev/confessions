@@ -1,5 +1,5 @@
 //
-//  PostItemViewController.swift
+//  PostConfessionViewController.swift
 //  Confessions
 //
 //  Created by Kirill Kudaev on 7/15/17.
@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class PostItemViewController: UIViewController, UITextFieldDelegate {
+class PostConfessionViewController: UIViewController, UITextFieldDelegate {
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -20,7 +20,7 @@ class PostItemViewController: UIViewController, UITextFieldDelegate {
         
         let pfItem = PFObject(className:"Item")
         
-        let postItemInfo = PostItemInfo(itemName: itemTitleTextField.text!, price: (itemPrice.text! as NSString).floatValue, description: itemDescription.text!)
+        let postItemInfo = PostConfession(itemName: itemTitleTextField.text!, price: (itemPrice.text! as NSString).floatValue, description: itemDescription.text!)
         
         if postItemInfo.error {
             
