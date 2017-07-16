@@ -88,6 +88,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-ne-XhZ">
+                                <rect key="frame" x="305" y="497" width="51" height="31"/>
+                                <color key="onTintColor" red="0.33333333329999998" green="0.78039215689999997" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include a poll?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIw-wG-Lhu">
+                                <rect key="frame" x="21" y="502" width="111.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,10 +105,18 @@
                             <constraint firstItem="BW1-eX-ex8" firstAttribute="top" secondItem="bdS-Px-SP4" secondAttribute="bottom" constant="58" id="3zx-K9-h5b"/>
                             <constraint firstItem="HDw-kK-dNQ" firstAttribute="centerX" secondItem="GXN-a8-RP9" secondAttribute="centerX" id="8CS-rX-8Y9"/>
                             <constraint firstItem="BW1-eX-ex8" firstAttribute="trailing" secondItem="GXN-a8-RP9" secondAttribute="trailingMargin" id="AGk-xV-gsb"/>
+                            <constraint firstItem="wOb-ne-XhZ" firstAttribute="top" secondItem="BW1-eX-ex8" secondAttribute="bottom" constant="18" id="BF8-eD-Q8i"/>
                             <constraint firstItem="J7G-Hm-P1I" firstAttribute="top" secondItem="HDw-kK-dNQ" secondAttribute="bottom" constant="17" id="K1I-Bu-4KW"/>
+                            <constraint firstItem="xIw-wG-Lhu" firstAttribute="leading" secondItem="GXN-a8-RP9" secondAttribute="leadingMargin" constant="5" id="pT8-UC-55v"/>
+                            <constraint firstItem="xIw-wG-Lhu" firstAttribute="top" secondItem="BW1-eX-ex8" secondAttribute="bottom" constant="23" id="rsf-gy-yWQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wOb-ne-XhZ" secondAttribute="trailing" constant="5" id="ss9-M3-ean"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Post a Confession" id="UxY-tg-WbY"/>
+                    <connections>
+                        <outlet property="confessionDescription" destination="BW1-eX-ex8" id="fDc-JY-xPV"/>
+                        <outlet property="includePollSwitch" destination="wOb-ne-XhZ" id="mxT-Xj-XZx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmz-Qq-brS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

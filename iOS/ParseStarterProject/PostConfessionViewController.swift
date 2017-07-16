@@ -12,29 +12,32 @@ class PostConfessionViewController: UIViewController, UITextFieldDelegate {
     
     var activityIndicator = UIActivityIndicatorView()
     
-    @IBOutlet weak var itemTitleTextField: UITextField!
-    @IBOutlet weak var itemPrice: UITextField!
-    @IBOutlet weak var itemDescription: UITextView!
+    @IBOutlet weak var confessionDescription: UITextView!
+    @IBOutlet weak var includePollSwitch: UISwitch!
     
     @IBAction func post(_ sender: Any) {
         
-        let pfItem = PFObject(className:"Item")
+        let hasPoll = includePollSwitch.isOn
         
-        let postItemInfo = PostConfession(itemName: itemTitleTextField.text!, price: (itemPrice.text! as NSString).floatValue, description: itemDescription.text!)
+        let pfItem = PFObject(className:"Post")
+        let confession = PostConfession(body: confessionDescription.text, hasPoll: hasPoll)
         
-        if postItemInfo.error {
+        if confession.error {
             
-            createOkAlert(title: "Error in form", message: postItemInfo.errorMessage!)
+            createOkAlert(title: "Error in form", message: confession.errorMessage!)
             
         } else {
             
             showActivityIndicator()
             
-            pfItem["title"] = itemTitleTextField.text
-            pfItem["description"] = itemDescription.text
-            pfItem["price"] = (itemPrice.text! as NSString).floatValue
-            pfItem["userId"] = PFUser.current()?.objectId
-            pfItem["userEmail"] = PFUser.current()?.email
+            pfItem["userId"] = UIDevice.current.identifierForVendor!.uuidString
+            pfItem["body"] = confession.body
+            pfItem["hasPoll"] = confession.hasPoll
+            pfItem["approved"] = false
+            pfItem["likes"] = 0
+            pfItem["yesAnswers"] = 0
+            pfItem["noAnswers"] = 0
+            
             
             pfItem.saveInBackground { (succcess, error) in
                 
@@ -42,12 +45,11 @@ class PostConfessionViewController: UIViewController, UITextFieldDelegate {
                 UIApplication.shared.endIgnoringInteractionEvents()
                 
                 if error != nil {
-                    self.createOkAlert(title: "Could not post item for sale", message: "Please try again")
+                    self.createOkAlert(title: "Could not post confession", message: "Please try again")
                 } else {
-                    self.createOkAlert(title: "Posted!", message: "Your item has been posted!")
-                    self.itemTitleTextField.text = "";
-                    self.itemPrice.text = "";
-                    self.itemDescription.text = "";
+                    self.createOkAlert(title: "Posted", message: "Confession has been posted!")
+                    self.confessionDescription.text = "";
+                    self.includePollSwitch.setOn(false, animated: true)
                 }
             }
         }
