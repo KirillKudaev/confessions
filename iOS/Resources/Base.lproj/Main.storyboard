@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3k-aX-Yrf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y3k-aX-Yrf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -224,6 +224,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-wb-aOm">
+                                            <rect key="frame" x="8" y="200" width="46" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.81555310845136153" blue="0.60600038241948506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Sbx-8q-n1C"/>
+                                                <constraint firstAttribute="width" constant="46" id="foZ-ex-XhK"/>
+                                            </constraints>
+                                            <state key="normal" title="Like">
+                                                <color key="titleColor" red="0.78189272309461466" green="0.2495304709252405" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="like:" destination="gRf-B8-j2I" eventType="touchUpInside" id="X3P-31-iCz"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Zmj-sH-ZOc" firstAttribute="leading" secondItem="qXi-VH-UN6" secondAttribute="trailing" constant="33" id="0uU-8r-ahG"/>
@@ -238,8 +252,10 @@
                                         <constraint firstItem="zcS-7H-Xxp" firstAttribute="leading" secondItem="fCg-Fj-gdO" secondAttribute="leadingMargin" id="JZv-nb-VKD"/>
                                         <constraint firstItem="les-1r-Imr" firstAttribute="leading" secondItem="fCg-Fj-gdO" secondAttribute="leadingMargin" id="KSl-Hy-cNS"/>
                                         <constraint firstItem="Zmj-sH-ZOc" firstAttribute="top" secondItem="Y0e-Ta-XUg" secondAttribute="bottom" constant="8" id="Lzt-1t-df3"/>
+                                        <constraint firstItem="TtI-wb-aOm" firstAttribute="top" secondItem="qXi-VH-UN6" secondAttribute="bottom" constant="7.5" id="Pia-Vt-10z"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xqh-Rc-TKi" secondAttribute="bottom" constant="0.5" id="SJv-UB-U9L"/>
                                         <constraint firstItem="IBW-h7-OxI" firstAttribute="top" secondItem="c6x-eZ-sSo" secondAttribute="bottom" constant="21" id="V46-iM-AdO"/>
+                                        <constraint firstItem="TtI-wb-aOm" firstAttribute="leading" secondItem="fCg-Fj-gdO" secondAttribute="leadingMargin" id="Vtb-Fn-StI"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xqh-Rc-TKi" secondAttribute="bottom" constant="0.5" id="Xai-9F-U7C"/>
                                         <constraint firstItem="les-1r-Imr" firstAttribute="top" secondItem="zcS-7H-Xxp" secondAttribute="bottom" constant="16" id="YgN-Ab-Tr3"/>
                                         <constraint firstItem="qXi-VH-UN6" firstAttribute="top" secondItem="les-1r-Imr" secondAttribute="bottom" constant="8" id="aqi-i8-v7g"/>
@@ -250,6 +266,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="btnLike" destination="TtI-wb-aOm" id="IDq-Dq-OtW"/>
                                     <outlet property="lblDescription" destination="c6x-eZ-sSo" id="FF2-mR-3gg"/>
                                     <outlet property="lblLikesNumber" destination="IBW-h7-OxI" id="XfB-nT-C7o"/>
                                     <outlet property="lblNoNumber" destination="Zmj-sH-ZOc" id="B33-eV-HIo"/>

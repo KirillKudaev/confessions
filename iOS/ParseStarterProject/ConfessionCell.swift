@@ -14,4 +14,6 @@ class ConfessionCell: UITableViewCell {
     @IBOutlet weak var lblYesNumber: UILabel!
     @IBOutlet weak var lblNoNumber: UILabel!
     @IBOutlet var lblTime: UILabel!
+    
+    @IBOutlet weak var btnLike: UIButton!
 }
