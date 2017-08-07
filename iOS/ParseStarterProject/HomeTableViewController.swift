@@ -11,8 +11,12 @@ import Parse
 // TODO: use MVC or MVP pattern
 class HomeTableViewController: UITableViewController {
 
+    var confessionArray = Array<Confession>()
+    var refresher: UIRefreshControl!
+    
     // TODO: Consider putting this method and a protocol for it in ConfessionCell.
     // "UIButton in UITableViewCell using Delegates and Protocols in Swift" https://www.youtube.com/watch?v=UPrBXUWPf6Q
+    //TODO: rename to likeTapped
     @IBAction func like(_ sender: UIButton) {
         print(sender.tag)
         
@@ -22,13 +26,22 @@ class HomeTableViewController: UITableViewController {
         // TODO: use bool isLiked in the ConfessionCell to identify this
         if cell.btnLike.titleLabel?.text == "Like" {
             cell.btnLike.setTitle("Unlike", for: .normal)
+            
+            let pfItem = PFObject(className:"Like")
+            pfItem["userId"] = UIDevice.current.identifierForVendor!.uuidString
+            pfItem["postId"] = confessionArray[sender.tag].id
+            
+            pfItem.saveInBackground { (succcess, error) in
+                if error != nil {
+                } else {
+                    // TODO: remove like from UI
+                }
+            }
+            
         } else if cell.btnLike.titleLabel?.text == "Unlike" {
             cell.btnLike.setTitle("Like", for: .normal)
         }
     }
-    
-    var confessionArray = Array<Confession>()
-    var refresher: UIRefreshControl!
     
     func refresh() {
         let query = PFQuery(className:"Post")
