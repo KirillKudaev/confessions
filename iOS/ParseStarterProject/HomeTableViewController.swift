@@ -130,7 +130,7 @@ class HomeTableViewController: UITableViewController {
         cell.lblNoNumber.text = String(self.confessionArray[indexPath.row].noAnswers)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, yyyy HH:mm:ss"
+        dateFormatter.dateFormat = "MMMM d, yyyy"
         let createdAt = dateFormatter.string(from:self.confessionArray[indexPath.row].createdAt)
         
         cell.lblTime.text = createdAt
