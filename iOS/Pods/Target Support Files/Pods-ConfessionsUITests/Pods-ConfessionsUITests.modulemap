@@ -1,0 +1,6 @@
+framework module Pods_ConfessionsUITests {
+  umbrella header "Pods-ConfessionsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
