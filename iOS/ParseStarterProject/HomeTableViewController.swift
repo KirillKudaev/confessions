@@ -16,7 +16,7 @@ class HomeTableViewController: UITableViewController {
     
     // TODO: Consider putting this method and a protocol for it in ConfessionCell.
     // "UIButton in UITableViewCell using Delegates and Protocols in Swift" https://www.youtube.com/watch?v=UPrBXUWPf6Q
-    //TODO: rename to likeTapped
+    // TODO: rename to likeTapped
     @IBAction func like(_ sender: UIButton) {
         print(sender.tag)
         
@@ -33,8 +33,10 @@ class HomeTableViewController: UITableViewController {
             
             pfItem.saveInBackground { (succcess, error) in
                 if error != nil {
+                    // remove like from UI
+                    cell.btnLike.setTitle("Like", for: .normal)
                 } else {
-                    // TODO: remove like from UI
+                    
                 }
             }
             
@@ -65,7 +67,7 @@ class HomeTableViewController: UITableViewController {
 //                    let _ = object.createdAt!
 //                    let _ = object.updatedAt!
                     
-                    // TODO: use guards
+                    // TODO: use guards. no force unwrapping
                     let confession = Confession(id: object.objectId!, body: object["body"] as! String, hasPole: object["hasPoll"] as! Bool, likes: object["likes"] as! Int, yesAnswers: object["yesAnswers"] as! Int, noAnswers: object["noAnswers"] as! Int, createdAt: object.createdAt!, updatedAt: object.updatedAt!)
                     
                     self.confessionArray.append(confession)

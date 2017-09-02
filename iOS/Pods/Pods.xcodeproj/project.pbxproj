@@ -29,28 +29,28 @@
 		4945289011F1D80B579F14A12B1536BB /* Pods-ConfessionsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ConfessionsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4B55FC042864936E483DF64823B574B9 /* Pods-ConfessionsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConfessionsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4BF26CC56D3C84F55CF1524C1E12528B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		506558481A7AF352FBF6A175C7903F12 /* Pods-ConfessionsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ConfessionsUITests.modulemap"; sourceTree = "<group>"; };
-		5108DEAB3ECD6ADB670ACB258594D73D /* Pods_Confessions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Confessions.framework; path = "Pods-Confessions.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506558481A7AF352FBF6A175C7903F12 /* Pods-ConfessionsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ConfessionsUITests.modulemap"; sourceTree = "<group>"; };
+		5108DEAB3ECD6ADB670ACB258594D73D /* Pods_Confessions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confessions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A268C4EDC89F3C4122F37382C3752B2 /* Pods-ConfessionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConfessionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		5EA96F4138D1803D34712D0660D7A94B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		624C71B36228146EECBD7BB42111736B /* Pods-ConfessionsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ConfessionsTests.modulemap"; sourceTree = "<group>"; };
+		624C71B36228146EECBD7BB42111736B /* Pods-ConfessionsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ConfessionsTests.modulemap"; sourceTree = "<group>"; };
 		63CE463F5693C00C84F4E3BF95B177B0 /* Pods-ConfessionsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ConfessionsTests-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69D2C1207D5264BE2427621AF1F6DB20 /* Pods-ConfessionsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ConfessionsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6BC2051043D07513BC8521F3C7182572 /* Pods-Confessions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Confessions-umbrella.h"; sourceTree = "<group>"; };
 		7A074DA4788F6B04D609F0716F4E6F5C /* Pods-ConfessionsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConfessionsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B70717164009A9DE5D20CBD2640DD23 /* Pods-Confessions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Confessions.release.xcconfig"; sourceTree = "<group>"; };
-		7BB2F4E53D5EEE586C3086DDFF796EF8 /* Pods-Confessions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Confessions.modulemap"; sourceTree = "<group>"; };
+		7BB2F4E53D5EEE586C3086DDFF796EF8 /* Pods-Confessions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Confessions.modulemap"; sourceTree = "<group>"; };
 		884FBB0ABD8BEE8FDA617DCE2E25FD33 /* Pods-Confessions-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Confessions-acknowledgements.plist"; sourceTree = "<group>"; };
 		8F0B1062B14350904032F0DAD556857D /* Pods-Confessions-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Confessions-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94E0C39DAA4B048727F478B0B89B1EA8 /* Pods_ConfessionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ConfessionsTests.framework; path = "Pods-ConfessionsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E0C39DAA4B048727F478B0B89B1EA8 /* Pods_ConfessionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConfessionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A7AB9984E7F3A163B3E3A458A1192C /* Pods-ConfessionsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConfessionsUITests-frameworks.sh"; sourceTree = "<group>"; };
 		A60F739FFCB080CB750364F637671EA9 /* Pods-Confessions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Confessions.debug.xcconfig"; sourceTree = "<group>"; };
 		AD99F9AB226D3D8656C47ED835A7563F /* Pods-ConfessionsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ConfessionsUITests-umbrella.h"; sourceTree = "<group>"; };
 		B1579982868B0B36D36574E053D29B31 /* Pods-ConfessionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConfessionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B37B4EFCA08700E49FF8D47915AD2AEF /* Pods-ConfessionsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConfessionsTests-resources.sh"; sourceTree = "<group>"; };
-		B4621F9960B03A2EDD7091FF59EE73C5 /* Pods_ConfessionsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ConfessionsUITests.framework; path = "Pods-ConfessionsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4621F9960B03A2EDD7091FF59EE73C5 /* Pods_ConfessionsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConfessionsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B901C7B95C1B00578FB63E74FB2BD4C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF956C8FDA87325FCB1642169AF5509 /* Pods-Confessions-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Confessions-resources.sh"; sourceTree = "<group>"; };
 		D07DA1801ACC91C244A37B2F6E02B209 /* Pods-ConfessionsUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConfessionsUITests-resources.sh"; sourceTree = "<group>"; };
@@ -207,7 +207,6 @@
 			children = (
 				953FD61A3CECC96530CB5CA297A086C1 /* Frameworks */,
 			);
-			name = "Google-Mobile-Ads-SDK";
 			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
@@ -299,7 +298,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -430,7 +429,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -438,15 +439,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -551,7 +558,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -559,14 +568,20 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
